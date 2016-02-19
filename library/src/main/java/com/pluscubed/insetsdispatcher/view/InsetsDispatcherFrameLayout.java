@@ -101,10 +101,14 @@ public class InsetsDispatcherFrameLayout extends FrameLayout implements InsetsDi
 
         public LayoutParams(ViewGroup.LayoutParams p) {
             super(p);
+
+            mHelper = new InsetsDispatcherLayoutParamsHelper(null, null);
         }
 
         public LayoutParams(int width, int height) {
             super(width, height);
+
+            mHelper = new InsetsDispatcherLayoutParamsHelper(null, null);
         }
 
         @Override

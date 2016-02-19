@@ -2,6 +2,7 @@ package com.pluscubed.insetsdispatcher;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
 public class InsetsDispatcherLayoutParamsHelper {
@@ -12,8 +13,8 @@ public class InsetsDispatcherLayoutParamsHelper {
     public boolean useBottomInset;
     public boolean insetsUseMargin;
 
-    public InsetsDispatcherLayoutParamsHelper(Context c, AttributeSet attrs) {
-        if (c == null) {
+    public InsetsDispatcherLayoutParamsHelper(@Nullable Context c, @Nullable AttributeSet attrs) {
+        if (c == null || attrs == null) {
             return;
         }
 
